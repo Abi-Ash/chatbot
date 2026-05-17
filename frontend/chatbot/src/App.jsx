@@ -24,7 +24,7 @@ function App() {
     setChat((prev) => [...prev, { role: "user", text: userMsg }]);
     setMessage("");
 
-    const response = await fetch("http://127.0.0.1:5000/chat", {
+    const response = await fetch("https://chatbot-7z4f.onrender.com/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: userMsg }),
